@@ -1,0 +1,26 @@
+##################################add for shanghai conf######################################
+######82 82 49 -> 82 82 4B
+######80 82 49 -> 80 82 4B
+#Add pharse auto function control:A0,   28,   26,   03,   00,   00,   00,   CB  2021-06-02 added by LiuWenJie
+#register addr :A0,   28,   26 ;
+# 00 -->Field On ,mobile reply REQA count,set ->00,disable this function
+# 00 -->Field On ,mobile reply REQB count,set ->00,disable this function
+# 00 -->Field On ,mobile reply REQF count,set ->00,disable this function
+# 00 -->Field On ,14443-4 reply NAK count,set ->00,disable this function
+# 00 -->disable pharse auto function
+OPLUS_CONF_EXTN={
+	      20,   02,   85,   0A,
+	      A1,   0E,   02,   60,   00,
+	      A0,   85,   04,   50,   08,   A8,   2C,
+	      A0,   6A,   10,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,   00,
+	      A0,   9E,   0C,   07,   BF,   25,   50,   00,   50,   00,   2B,   52,   03,   00,   00,
+	      A0,   0D,   06,   82,   82,   4B,   80,   00,   00,
+	      A0,   0D,   06,   80,   82,   4B,   80,   00,   00,
+	      A0,   0D,   06,   62,   32,   AE,   00,   7F,   00,
+	      A0,   0D,   06,   67,   32,   AE,   00,   1F,   00,
+	      A0,   0D,   06,   80,   7D,   A0,   00,   94,   BF,
+	      A0,   28,   26,   00,   00,   00,   00,   00,
+	      B4,   00,   00,   10,   FF,   00,   D0,   02,   00,   84,   03,   00,   E0,   01,    00,
+	      00,   00,   7C,   00,   00,   80,   B4,   00,   7C,   B4,   00,   80,   10,   FF,    7C,   10,   FF,   80
+}
+##############################NEED THIS LINE TO END FILE#####################################
